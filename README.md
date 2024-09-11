@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/1d88068f-dd4f-4d59-b7d9-c42800bfff1e)
+
+
 En este proyecto hemos aprendido a trabajar con APIs REST, en particular utilizando la API de Rick and Morty. 
 Vimos cómo realizar peticiones fetch para obtener datos,
 manejar la respuesta y desplegarlos dinámicamente en una página web usando JavaScript.
