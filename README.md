@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/1d88068f-dd4f-4d59-b7d9-c42800bfff1e)
+![The Rick and Morty API - Google Chrome 11_09_2024 2_57_22 p  m](https://github.com/user-attachments/assets/499a27ce-9850-42f9-9f15-26f79ad939dd)
 
 
 En este proyecto hemos aprendido a trabajar con APIs REST, en particular utilizando la API de Rick and Morty. 
