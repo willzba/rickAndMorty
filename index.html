@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Rick_and_Morty API</title>
+</head>
+<body>
+
+    <header>
+        <h1>Personajes de    <span class="animated-span">Rick</span> and <span class="animated-span">Morty</span></h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar personajes...">
+        </div>
+    </header>
+
+    <div id="data-container">
+        <!-- Aquí se mostrarán los personajes -->
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="imagen del personaje" alt="Personaje">
+            <h2 id="modalName"></h2>
+            <p id="modalLocation"></p>
+            <p id="modalOrigin"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

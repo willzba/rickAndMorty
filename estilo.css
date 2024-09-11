@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f067;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #03000041;
+}
+
+header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #3C3C3C;
+}
+
+.animated-span {
+    display: inline-block;
+    font-size: 30px;
+    font-style: oblique;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.search-bar {
+    position: relative;
+    width: 300px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+}
+
+#data-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.character-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.animated-span:hover {
+    transform: translateZ(50px) scale(1.2);
+    color: #ff6347;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+}
+
+.character-card img {
+    width: 100%;
+    height: auto;
+}
+
+.character-card h2 {
+    font-size: 1.2em;
+    margin: 10px;
+    color: #333;
+}
+
+.character-card a {
+    text-decoration: none;
+    color: #271568ec;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #abbfca;
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid #0000007a;
+    width: 77%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal img {
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.close {
+    color: #700707;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.character-card a:hover,
+.character-card a:focus {
+    color: #00a2ff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    margin: 10px 0;
+    color: #030000;
+    text-decoration: underline;
+}
