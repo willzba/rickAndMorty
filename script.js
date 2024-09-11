@@ -75,11 +75,51 @@ function showModal(character) {
 }
 
 // Filtrar personajes según la búsqueda
-document.getElementById('searchInput').addEventListener('input', (e) => {
+searchInput.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
+
+    // Si el campo de búsqueda está vacío, recargar la página
+    if (searchTerm === "") {
+        location.reload();
+        return;
+    }
+
     const filteredCharacters = allCharacters.filter(character =>
         character.name.toLowerCase().includes(searchTerm)
     );
-    displayCharacters(filteredCharacters);
+
+    displaySuggestions(filteredCharacters);
 });
+
+
+// Mostrar sugerencias
+function displaySuggestions(characters) {
+    suggestions.innerHTML = '';
+    if (characters.length > 0) {
+        suggestions.style.display = "block";
+        characters.forEach(character => {
+            const suggestionItem = document.createElement('li');
+            
+            // Crear el elemento de imagen
+            const img = document.createElement('img');
+            img.src = character.image;
+            img.alt = character.name;
+
+            // Crear el texto de la sugerencia
+            const text = document.createElement('span');
+            text.textContent = character.name;
+
+            suggestionItem.appendChild(img);
+            suggestionItem.appendChild(text);
+            suggestionItem.addEventListener('click', () => {
+                searchInput.value = character.name;
+                suggestions.style.display = 'none';
+                displayCharacters([character]);
+            });
+            suggestions.appendChild(suggestionItem);
+        });
+    } else {
+        suggestions.innerHTML = '<li>No se encontraron personajes</li>';
+    }
+}
 
